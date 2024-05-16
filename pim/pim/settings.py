@@ -74,17 +74,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "pim.wsgi.application"
 
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
+# tag::initial-database-config[]
+# DATABASE_URL=postgresql://pim:pim@localhost:5432/pim
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'NAME': 'pim',
+       'USER': 'pim',
+       'PASSWORD': 'pim',
+       'HOST': 'localhost',
+       'PORT': '5432',
+       # 'TEST': 'test_pim',  # Default: test_[NAME]
+   },
 }
-
+# end::initial-database-config[]
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
