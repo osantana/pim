@@ -27,10 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# tag::settings-installed-apps[]
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -42,7 +39,6 @@ INSTALLED_APPS = [
     # Project Applications
     "agenda",
 ]
-# end::settings-installed-apps[]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

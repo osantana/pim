@@ -1,4 +1,3 @@
-# tag::initial-test-view[]
 from django.contrib import admin
 from django.urls import path
 
@@ -8,4 +7,3 @@ urlpatterns = [
     path("hello-world/", views.hello, name="hello-world"),
     path("admin/", admin.site.urls),
 ]
-# end::initial-test-view[]
