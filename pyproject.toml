@@ -1,24 +1,16 @@
-[tool.poetry]
+[project]
 name = "pim"
 version = "0.1.0"
-description = ""
-authors = ["Osvaldo Santana Neto <osantana@osantana.me>"]
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.1.4",
+    "psycopg2-binary>=2.9.10",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-Django = "*"
-psycopg2 = "*"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "*"
-pytest-django = "*"
-pytest-cov = "*"
-
-# tag::pytest-ini-basic[]
-[tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "pim.settings"
-# end::pytest-ini-basic[]
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+    "pytest-django>=4.9.0",
+]
